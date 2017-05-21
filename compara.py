@@ -172,9 +172,11 @@ if __name__ == '__main__':
     print('tamanhos', len(lista_int),' : ', len(lista_m),' : ', len(lista_p))
 
     #"""
+    print('Calculando tempo de execução com timeit')
     calcular_tempo_timeit(lista_int,var_random)
     calcular_tempo_timeit(lista_m, var_melhor)
     calcular_tempo_timeit(lista_p, var_pior)
+    print('done timeit().')
     #"""
 
     print('calculando o tempo > ')
