@@ -50,16 +50,22 @@ def calcular_tempo_timeit(lista, tipo):
     arquivo = open(name_file, operacao)
 
     #calculando o ShellSort()
+    print('calculando shell em caso ', tipo)
     tempo_ShellSort = timeit.timeit("ShellSort({})".format(lista), setup="from __main__ import ShellSort", number=1)
     arquivo.write(str(float(tempo_ShellSort))+'\n')
+    print('shell done.')
 
+    print('calculando buble em caso ', tipo)
     # calculando o BubleSort()
     tempo_BubleSort = timeit.timeit("BubleSort({})".format(lista), setup="from __main__ import BubleSort", number=1)
     arquivo.write(str(float(tempo_BubleSort))+'\n')
+    print('buble done.')
 
     # calculando o BucketSort
+    print('calculando bucket em caso ', tipo)
     tempo_BucketSort = timeit.timeit("BubleSort({})".format(lista), setup="from __main__ import BubleSort", number=1)
     arquivo.write(str(float(tempo_BucketSort))+'\n')
+    print('bucket done.')
 
 def calcular_tempo_fim_menos_inicio(lista, tipo):
     '''calcular tempo de execucao'''
@@ -160,7 +166,7 @@ if __name__ == '__main__':
     from gerar_numeros import gerar_numeros
 
     print('gerando numeros >')
-    gerar_numeros(quantidade=100000,maximo=999999)
+    gerar_numeros(quantidade=500000, maximo=1000000)
 
     print('obtendo as listas de valores > ')
     lista_int = get_lista() #obtendo lista noarquivo a_numeros.txt gerada aleatoriamente
@@ -171,20 +177,22 @@ if __name__ == '__main__':
 
     print('tamanhos', len(lista_int),' : ', len(lista_m),' : ', len(lista_p))
 
-    #"""
+
     print('Calculando tempo de execução com timeit') #
     calcular_tempo_timeit(lista_int,var_random)      #
     calcular_tempo_timeit(lista_m, var_melhor)       #
     calcular_tempo_timeit(lista_p, var_pior)         #
     print('done timeit().')
-    #"""
 
-    print('calculando o tempo > ')
+
     """
+    print('Calculando tempo de execução com ini_fim() > ')
     calcular_tempo_fim_menos_inicio(lista_int, var_random)
     calcular_tempo_fim_menos_inicio(lista_m, var_melhor)
     calcular_tempo_fim_menos_inicio(lista_p, var_pior)
+    print('done ini_fim().')
     """
+
 
     print('gerando os graficos > ')
     #gera os gráficos dos tempos
