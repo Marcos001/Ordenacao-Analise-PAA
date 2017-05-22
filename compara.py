@@ -167,7 +167,7 @@ if __name__ == '__main__':
 
 
     print('gerando numeros >')
-    gerar_numeros(quantidade=100000, maximo=1000000)
+    gerar_numeros(quantidade=200000, maximo=1000000)
 
     print('obtendo as listas de valores > ')
     lista_int = get_lista() #obtendo lista noarquivo a_numeros.txt gerada aleatoriamente
