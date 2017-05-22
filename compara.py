@@ -63,7 +63,7 @@ def calcular_tempo_timeit(lista, tipo):
 
     # calculando o BucketSort
     print('calculando bucket em caso ', tipo)
-    tempo_BucketSort = timeit.timeit("BubleSort({})".format(lista), setup="from __main__ import BubleSort", number=1)
+    tempo_BucketSort = timeit.timeit("BucketSort({})".format(lista), setup="from __main__ import BucketSort", number=1)
     arquivo.write(str(float(tempo_BucketSort))+'\n')
     print('bucket done.')
 
