@@ -165,8 +165,9 @@ if __name__ == '__main__':
 
     from gerar_numeros import gerar_numeros
 
+    """
     print('gerando numeros >')
-    gerar_numeros(quantidade=500000, maximo=1000000)
+    gerar_numeros(quantidade=50000, maximo=1000000)
 
     print('obtendo as listas de valores > ')
     lista_int = get_lista() #obtendo lista noarquivo a_numeros.txt gerada aleatoriamente
@@ -183,6 +184,7 @@ if __name__ == '__main__':
     calcular_tempo_timeit(lista_m, var_melhor)       #
     calcular_tempo_timeit(lista_p, var_pior)         #
     print('done timeit().')
+    """
 
 
     """
